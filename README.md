@@ -10,7 +10,7 @@ number. Code: MIT License (`LICENSE`); data: CC BY 4.0.
 
 ## Getting the data
 
-Download the Zenodo archive `noise-sustained-cluster-switching-data-v1.0.0` and copy its `analysis/` directory into the
+Download and extract the Zenodo archive `paper3-data-v1.0.0.zip` and copy its `analysis/` directory into the
 root of this repository, so that the scripts find their inputs under `analysis/`. The archive also contains
 `reference_outputs/`, the figure files and JSON outputs used in the paper, for comparison with the regenerated files.
 
@@ -29,6 +29,8 @@ quoted in the text are recomputed from the files under `analysis/`. This takes a
 pixel, and `aggregates.json` and `pathB_summary.json` were reproduced exactly apart from the time stamp, the command
 line and the run time (compared with `reference_outputs/` of the data archive). Checked again on 2026-11-03, after the PDF versions of the
 figures were set to 600 dpi, with the same result (also with Python 3.13.13 and NumPy 2.4.6).
+
+A further check on 2026-11-17 reproduced the numerical aggregates (excluding run metadata) and five of seven PNGs pixel for pixel. Two PNGs (Figs. 1 and 3) differed in image dimensions and layout; the values in the regenerated aggregates agreed.
 
 **Stage B: recomputation from starting states.** The scripts that produced the stored outputs are included, with the
 starting states, random seeds, integration method and run lengths (Sec. II and Supplementary Material, Secs. S1 and
